@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
-import {sum} from './summ'
+import {sum} from './summ.js'
 
 describe("it should return correct value", () => {
   const originalAlert = window.alert;

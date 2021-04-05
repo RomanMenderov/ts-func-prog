@@ -1,5 +1,4 @@
 export function sum(a){
-
     if(a === undefined){
         // eslint-disable-next-line no-param-reassign
         a = 0;
@@ -7,7 +6,7 @@ export function sum(a){
 
     let currentSum = a;
   
-    function f(b:number) {
+    function f(b) {
       currentSum += b;
       return f;
     }
