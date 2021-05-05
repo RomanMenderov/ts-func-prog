@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import {hof} from './currying'
+import { hof } from "./currying";
 
 describe("it should return correct value", () => {
   const originalConsoleLog = console.log;
@@ -16,7 +16,7 @@ describe("it should return correct value", () => {
     console.log(hof(1, 2, 3, 4, 5));
     expect(console.log).toHaveBeenCalledWith(15);
   });
-  
+
   it("should return 20", () => {
     console.log(hof(2, 3, 4)(5, 6));
     expect(console.log).toHaveBeenCalledWith(20);
@@ -33,5 +33,4 @@ describe("it should return correct value", () => {
     console.log(hof(5)(6)(7)(8)(9)); // 35
     expect(console.log).toHaveBeenCalledWith(35);
   });
- 
 });

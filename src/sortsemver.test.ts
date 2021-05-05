@@ -21,7 +21,7 @@ describe("it should return correct value", () => {
           "1",
           "1.23.45",
           "1.4.50",
-          "1.2.3.4.5.6.7"
+          "1.2.3.4.5.6.7",
         ])
       )
     ).toEqual(
@@ -32,7 +32,7 @@ describe("it should return correct value", () => {
         "1.2.3.4.5.6.7",
         "1.4.50",
         "1.23.45",
-        "2.5.0"
+        "2.5.0",
       ])
     );
   });
