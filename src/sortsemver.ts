@@ -1,4 +1,3 @@
-/* eslint-disable no-else-return */
 export const semverSort = (strArr: string[]): string[] => {
   function compare(a: string, b: string) {
     const aSplit = a.split(".");

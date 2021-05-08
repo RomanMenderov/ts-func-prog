@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { hof } from "./currying";
 
 describe("it should return correct value", () => {
@@ -26,11 +25,11 @@ describe("it should return correct value", () => {
     expect(console.log).toHaveBeenCalledWith(25);
   });
   it("should return 30", () => {
-    console.log(hof(4, 5)(6)(7, 8)); // 30
+    console.log(hof(4, 5)(6)(7, 8));
     expect(console.log).toHaveBeenCalledWith(30);
   });
   it("should return 35", () => {
-    console.log(hof(5)(6)(7)(8)(9)); // 35
+    console.log(hof(5)(6)(7)(8)(9));
     expect(console.log).toHaveBeenCalledWith(35);
   });
 });

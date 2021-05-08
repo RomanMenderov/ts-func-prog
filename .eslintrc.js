@@ -18,6 +18,10 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
+    "no-alert": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-else-return": ["error", { allowElseIf: true }],
     "import/prefer-default-export": "off",
     "max-len": ["error", { ignoreComments: true }],
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],

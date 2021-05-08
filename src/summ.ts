@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
-export function sum(a?: number | undefined): Function {
-  // eslint-disable-next-line no-param-reassign
+export function sum(a?: number): Function {
   a = a || 0;
 
   let currentSum = a;

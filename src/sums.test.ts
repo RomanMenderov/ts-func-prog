@@ -1,5 +1,3 @@
-/* eslint-disable no-alert */
-/* eslint-disable no-console */
 import { sum } from "./summ";
 
 describe("it should return correct value", () => {

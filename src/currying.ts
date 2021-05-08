@@ -1,31 +1,20 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-types */
+
+function func(a: number, b: number, c: number, d: number, e: number): number;
 
 function func(a: number, b: number, c: number, d: number, e: number) {
   return a + b + c + d + e;
 }
 
-// function curry<A, B, C>
-// (cb: (x: A, y: B) => C): (x: A) => (y: B) => C;
-// function curry<A, B, C, D>
-// (cb: (x: A, y: B, z: C) => D): (x: A) => (y: B) => (z: C) =>D;
-// function curry<A, B, C, D, E>
-// (cb: (x: A, y: B) => C): (x: A) => (y: B) => C;
-// function curry<A, B, C, D, E, F>
-// (cb: (x: A, y: B) => C): (x: A) => (y: B) => C;
-// function curry<A, B, C, D, E, F, J>
-// (cb: (a: A, b: B, c: C, d: D, e:E, f: F) => J):
-//  (a: A) => (b: B) => (c: C) => (d:D)=> (e:E)=> (f: F) =>J;
-// eslint-disable-next-line @typescript-eslint/ban-types
 function curry(cb: Function): Function;
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-function curry(myFunc: any) {
-  return function curried(this: any, ...args: any[]) {
+function curry(myFunc: Function) {
+  return function curried(this: number, ...args: number[]) {
     if (args.length >= myFunc.length) {
       return myFunc.apply(this, args);
     }
     // eslint-disable-next-line no-shadow
-    return function result(this: any, ...args2: any[]) {
+    return function result(this: number, ...args2: number[]) {
       return curried.apply(this, args.concat(args2));
     };
   };
